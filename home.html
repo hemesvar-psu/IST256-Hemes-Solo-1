@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nittany Storefront – Home</title>
+
+  <!-- EXTERNAL CSS (required) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- INTERNAL CSS (required) – tiny page-specific rules -->
+  <style>
+    /* internal: just for this page’s hero text and announcement bar */
+    .announcement {
+      background: #002d6c;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+    }
+    .hero h1 span {
+      border-bottom: 0.2rem solid #ffd100;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Penn_State_Nittany_Lion_logo.svg" alt="Logo" class="logo">
+      <div class="brand-text">
+        <h1>Nittany Storefront</h1>
+        <p class="tagline">Tech • Apparel • Snacks</p>
+      </div>
+    </div>
+
+    <!-- Search (basic web element) -->
+    <form class="search" action="#" method="get">
+      <label for="q" class="sr-only">Search</label>
+      <input id="q" name="q" type="search" placeholder="Search products…" />
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav class="main-nav" aria-label="Primary">
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">New Arrivals</a></li>
+      <li><a href="#">Tech</a></li>
+      <li><a href="#">Apparel</a></li>
+      <li><a href="#">Snacks</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Inline CSS example (required) -->
+  <div class="announcement" style="letter-spacing: 0.5px;">
+    Welcome back! Free campus delivery on orders over $25 this week.
+  </div>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Back-to-Campus <span>Deals</span></h1>
+        <p>Grab essentials for the semester—laptops, hoodies, and late-night snacks.</p>
+        <a href="#" class="btn">Shop Featured</a>
+      </div>
+      <figure class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1518779551281-8f19cf5f69aa?q=80&w=1600&auto=format&fit=crop"
+          alt="Laptop and accessories on desk" />
+      </figure>
+    </section>
+
+    <!-- Featured products grid -->
+    <section class="section">
+      <h2>Featured Products</h2>
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1512446816042-444d641267bc?q=80&w=1200&auto=format&fit=crop" alt="Headphones">
+          <div class="card-body">
+            <h3>Wireless Headphones</h3>
+            <p class="price">$59.99</p>
+            <p class="desc">Noise-isolating over-ear design—perfect for the library.</p>
+            <a class="btn small" href="#">Add to Cart</a>
+          </div>
+          <!-- inline style example on element -->
+          <div class="badge" style="background:#ffd100;color:#002d6c;">20% OFF</div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=1200&auto=format&fit=crop" alt="Hoodie">
+          <div class="card-body">
+            <h3>Nittany Hoodie</h3>
+            <p class="price">$39.99</p>
+            <p class="desc">Cozy fleece with campus pride.</p>
+            <a class="btn small" href="#">Add to Cart</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=1200&auto=format&fit=crop" alt="Snack box">
+          <div class="card-body">
+            <h3>Study Snack Box</h3>
+            <p class="price">$14.99</p>
+            <p class="desc">Chips, bars, and a caffeine kick for long nights.</p>
+            <a class="btn small" href="#">Add to Cart</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Info columns -->
+    <section class="section columns">
+      <article>
+        <h3>Why Shop With Us?</h3>
+        <ul>
+          <li>Student pricing on select tech</li>
+          <li>Free pickup at Abington</li>
+          <li>Secure checkout</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Store Hours</h3>
+        <p>Mon–Fri: 10am–6pm<br>Sat: 11am–4pm<br>Sun: Closed</p>
+      </article>
+      <article>
+        <h3>Newsletter</h3>
+        <form action="#" method="post">
+          <label for="email" class="sr-only">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@psu.edu" required />
+          <button type="submit" class="btn small">Subscribe</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Nittany Storefront • Made for IST 256 CSS Exercise</p>
+    <nav aria-label="Footer">
+      <a href="#">Accessibility</a>
+      <a href="#">Privacy</a>
+      <a href="#">Contact</a>
+    </nav>
+  </footer>
+
+  <script>
+    // tiny JS just to set the year (not required by assignment, but nice)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
