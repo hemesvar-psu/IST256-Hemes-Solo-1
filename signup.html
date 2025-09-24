@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Signup – Nittany Storefront</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header d-flex justify-content-between align-items-center p-3 bg-light shadow-sm">
+    <div class="brand d-flex align-items-center gap-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Penn_State_Nittany_Lion_logo.svg" alt="Logo" class="logo" style="width:44px;height:44px;">
+      <h1 class="h5 m-0">Nittany Storefront</h1>
+    </div>
+    <nav>
+      <a class="btn btn-sm btn-primary" href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="mb-4 text-center">User Signup</h2>
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-success">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer text-center py-3 bg-dark text-light">
+    <p>&copy; <span id="year"></span> Nittany Storefront • Signup Page</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
